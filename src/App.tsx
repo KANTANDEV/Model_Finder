@@ -1,4 +1,5 @@
 // ? Importations des librairies
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
@@ -8,10 +9,12 @@ import "./Styles/App.css";
 import { Home } from "./Pages/Home";
 import { Cards } from "./Pages/Cards";
 import { AiBranch } from "./Pages/AiBranch";
+import { ApprType } from "./Pages/ApprType";
 function App() {
     // & States
-    const [AiBranchValue, setAiBranchValue] = useState<string>("");
-    const [BranchValue, setBranchValue] = useState<string>("");
+    const [Clicked, setClicked] = React.useState<boolean>(false);
+    const [AiType, setAiType] = React.useState<string>("");
+    const [AiAppr, setAiAppr] = React.useState<string>("");
 
     return (
         <>
@@ -27,7 +30,11 @@ function App() {
                     />
                     <Route
                         path="/AiBranch"
-                        element={<AiBranch />}
+                        element={<AiBranch Clicked={Clicked} />}
+                    />
+                    <Route
+                        path="/ApprType"
+                        element={<ApprType />}
                     />
                 </Routes>
             </BrowserRouter>

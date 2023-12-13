@@ -5,11 +5,12 @@ import { Link } from "react-router-dom";
 // ? Importation des composants
 import { NavBar } from "../Components/NavBar";
 // ? Importation du style
-import "../Styles/Pages/AiBranch.css";
+import "../Styles/Pages/ApprType.css";
 
-export const AiBranch = () => {
+export const ApprType = () => {
     const [Clicked, setClicked] = React.useState<boolean>(false);
     const [AiType, setAiType] = React.useState<string>("");
+
     return (
         <>
             <NavBar />
@@ -18,7 +19,7 @@ export const AiBranch = () => {
                     <Link to="/">
                         <FaArrowLeft />
                     </Link>
-                    <h2>Quel type d'IA recherchez vous ?</h2>
+                    <h2>Quel model d'IA recherchez vous ?</h2>
                 </div>
                 <Link to="/ApprType">
                     <div className="AiBranch_section_Cards">
@@ -27,7 +28,7 @@ export const AiBranch = () => {
                             onClick={() => setAiType("generative")}
                         >
                             <img
-                                src="/img/generative.png"
+                                src="/img/ML.png"
                                 alt="Logo IA Generative"
                             />
                         </div>
@@ -36,7 +37,7 @@ export const AiBranch = () => {
                             onClick={() => setAiType("predictive")}
                         >
                             <img
-                                src="/img/predictive.png"
+                                src="/img/DL.png"
                                 alt="Logo IA Predictive"
                             />
                         </div>

@@ -1,0 +1,16 @@
+.link-no-decoration {
+    text-decoration: none;
+    color: black;
+}
+
+.NavBar {
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    > img {
+        width: 5%;
+        height: 5%;
+    }
+}
